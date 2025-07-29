@@ -54,3 +54,14 @@ DO.
   lv_input = lv_input + 1.
 
 ENDDO.
+
+*Continue
+DATA lv_input(2) TYPE n VALUE 10.
+DO 10 TIMES.
+  IF lv_input = 14.
+    CONTINUE.
+
+  ENDIF.
+    WRITE: / 'The Output is', lv_input.
+    lv_input = lv_input + 1.
+    ENDDO.
