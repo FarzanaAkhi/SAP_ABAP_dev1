@@ -71,6 +71,6 @@ DO 10 TIMES.
   lv_input = lv_input + 1.
   CHECK lv_input = 15.
   WRITE: / 'The Output is', lv_input.
-  lv_input = lv_input+1.
+
 
 ENDDO.
