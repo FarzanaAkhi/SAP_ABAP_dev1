@@ -100,3 +100,17 @@ DATA : lv_input(50) TYPE c VALUE ' Welcome To Home',
 
 TRANSLATE lv_input USING lv_rule.
 WRITE: / 'Output Using Rule:', lv_input.
+
+DATA: lv_input1(10) TYPE c VALUE'012345678',
+      lv_input2(10) TYPE c VALUE'012345678',
+      lv_input3(10) TYPE c VALUE'012345678'.
+
+
+SHIFT lv_input1 By 5 places.
+WRITE: 'Left:', lv_input1.
+
+SHIFT lv_input2 By 4 places RIGHT.
+WRITE: / 'Right:', lv_input2.
+
+SHIFT lv_input1 By 4 places CIRCULAR.
+WRITE: / 'Circular:', lv_input3.
