@@ -67,3 +67,36 @@ WRITE:/ 'After Condense NO-GAPS:' , lv_input.
 lv_length = STRLEN( lv_input ).
 WRITE: /'The length before Condense:', lv_length.
 
+
+
+*FIND String Operation
+
+DATA lv_input(50) TYPE c VALUE 'System Application product'.
+
+FIND 'System' IN lv_input IGNORING CASE.
+IF sy-subrc = 0.
+
+  WRITE:'Successful', sy-subrc.
+
+ELSE.
+  WRITE:'UnSuccessful', sy-subrc.
+
+ENDIF.
+
+*Translate Upper and Lower case
+
+DATA : lv_input(50) TYPE c VALUE ' Welcome To Home',
+       lv_input1(50) TYPE c VALUE ' welcome to home'.
+
+TRANSLATE lv_input1 TO UPPER CASE.
+WRITE:/ lv_input1.
+
+TRANSLATE lv_input TO LOWER CASE.
+WRITE: / lv_input.
+
+DATA : lv_input(50) TYPE c VALUE ' Welcome To Home',
+       lv_input1(50) TYPE c VALUE ' welcome to home',
+       lv_rule(10) TYPE c value 'wWtThH'.
+
+TRANSLATE lv_input USING lv_rule.
+WRITE: / 'Output Using Rule:', lv_input.
