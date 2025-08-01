@@ -129,3 +129,19 @@ SHIFT lv_result2 LEFT DELETING LEADING '0'.
 CONDENSE lv_result2.
 
 WRITE:/'Result after deletation', lv_result2.
+
+*SubString processing
+
+DATA: lv_value(50) TYPE c VALUE '91-040-3456777890'.
+DATA: lv_country(2) TYPE c.
+DATA: lv_city(3) TYPE c.
+DATA: lv_number(10) TYPE c.
+
+lv_country = lv_value+0(2).
+WRITE:'The country code:',lv_country.
+
+lv_city = lv_value+3(3).
+WRITE:'The city code:',lv_city.
+
+lv_number = lv_value+7(10).
+WRITE:'The phone number:',lv_number.
