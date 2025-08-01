@@ -114,3 +114,18 @@ WRITE: / 'Right:', lv_input2.
 
 SHIFT lv_input1 By 4 places CIRCULAR.
 WRITE: / 'Circular:', lv_input3.
+
+*Leaading and Trailing
+
+DATA : lv_result1(10) TYPE c VALUE '7000000000',
+       lv_result2(10) TYPE c VALUE '0000000007'.
+
+SHIFT lv_result1 RIGHT DELETING TRAILING '0'.
+CONDENSE lv_result1.
+
+WRITE:/'Result after deletation', lv_result1.
+
+SHIFT lv_result2 LEFT DELETING LEADING '0'.
+CONDENSE lv_result2.
+
+WRITE:/'Result after deletation', lv_result2.
