@@ -167,3 +167,6 @@ WRITE:'The city code:',lv_city.
 
 lv_number = lv_value+7(10).
 WRITE:'The phone number:',lv_number.
+
+
+NOTE: String operation only works for character data types : C (Character), N (Numeric), D (Date), T (Time), String 
