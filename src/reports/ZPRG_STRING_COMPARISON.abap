@@ -40,3 +40,17 @@ IF lv_string1 co lv_string2 .
 ENDIF.
 
 Here systemz is not present in the 2nd varriable. Because it's CO( Contains Only)
+
+DATA : lv_string1(30) TYPE c VALUE 'System application producTT'.
+DATA : lv_string2(30) TYPE c VALUE 'System Application Product'.
+
+IF lv_string1 co lv_string2 .
+  WRITE: 'True', sy-fdpos.
+
+  ELSE.
+      WRITE: 'False', sy-fdpos.
+
+ENDIF.
+
+* System will check the whole varriable length and each letter whether all letters present in 2nd varriable or not. here capital T is not present in the 2nd varriable so output is false.
+Though small or capital doesn't matter but has to be present in "CO" string operation case.
