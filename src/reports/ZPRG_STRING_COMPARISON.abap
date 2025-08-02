@@ -24,6 +24,8 @@ IF lv_string1 co lv_string2 .
 
 ENDIF.
 
+**Output: TRUE 20***
+
 * if the word "system" found in the condition, it will show the varriable1's length.
 else will show the 2nd varriables length.
 
@@ -41,6 +43,8 @@ IF lv_string1 co lv_string2 .
 
 ENDIF.
 
+***OUTPUT: FALSE 6, Because at the point of 6th in v2 the letter z didn't found in v2***
+
 Here systemz is not present in the 2nd varriable. Because it's CO( Contains Only)
 
 DATA : lv_string1(30) TYPE c VALUE 'System application producTT'.
@@ -53,6 +57,8 @@ IF lv_string1 co lv_string2 .
       WRITE: 'False', sy-fdpos.
 
 ENDIF.
+
+***OUTPUT: FALSE 25, Because at the point of 25th or in whole v2 the letter T didn't found in v2***
 
 * System will check the whole varriable length and each letter whether all letters present in 2nd varriable or not. here capital T is not present in the 2nd varriable so output is false.
 Though small or capital doesn't matter but has to be present in "CO" string operation case.
