@@ -39,4 +39,4 @@ IF lv_string1 co lv_string2 .
 
 ENDIF.
 
-Here systemz is not present in the 2nd varriable.
+Here systemz is not present in the 2nd varriable. Because it's CO( Contains Only)
