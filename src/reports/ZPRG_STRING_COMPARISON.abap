@@ -12,6 +12,8 @@ NP: Contains no Pattern
 
 REPORT ZPRG_STRING_COMPARISON.
 
+*****CO (Contains Only)***********
+
 DATA : lv_string1(20) TYPE c VALUE 'system'.
 DATA : lv_string2(30) TYPE c VALUE 'system Application Product'.
 
@@ -54,3 +56,22 @@ ENDIF.
 
 * System will check the whole varriable length and each letter whether all letters present in 2nd varriable or not. here capital T is not present in the 2nd varriable so output is false.
 Though small or capital doesn't matter but has to be present in "CO" string operation case.
+
+
+********CN (Contains not only)***********
+***Exact opposite of CO********
+
+DATA : lv_string1(20) TYPE c VALUE 'System '.
+DATA : lv_string2(30) TYPE c VALUE 'System Application Product'.
+
+IF lv_string1 CN lv_string2 .
+  WRITE:  sy-fdpos.
+
+ELSE.
+  WRITE:  sy-fdpos.
+
+ENDIF.
+
+***Result will be 20, because the condition is true and will go for 2nd condion and find false so shows v1's result.
+
+***In CO if the condition is TRUE it shows the Varriable 1's length and in CN if the condition is False then it shows Varriable 1's length.
