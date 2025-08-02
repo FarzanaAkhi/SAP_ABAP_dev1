@@ -75,3 +75,20 @@ ENDIF.
 ***Result will be 20, because the condition is true and will go for 2nd condion and find false so shows v1's result.
 
 ***In CO if the condition is TRUE it shows the Varriable 1's length and in CN if the condition is False then it shows Varriable 1's length.
+
+
+**for instance,***
+
+
+DATA : lv_string1(20) TYPE c VALUE 'Systemz '.
+DATA : lv_string2(30) TYPE c VALUE 'System Application Product'.
+
+IF lv_string1 CN lv_string2 .
+  WRITE:  sy-fdpos.
+
+ELSE.
+  WRITE:  sy-fdpos.
+
+ENDIF.
+
+***here output will be 6 becuase z is not in varriable 2 in the position of 6.***
