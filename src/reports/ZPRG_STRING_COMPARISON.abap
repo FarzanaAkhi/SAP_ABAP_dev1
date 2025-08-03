@@ -98,3 +98,17 @@ ELSE.
 ENDIF.
 
 ***here output will be 6 becuase z is not in varriable 2 in the position of 6.***
+
+****CA(Contain any)****
+
+DATA : lv_string11(20) TYPE c VALUE 'Test@1234'.
+DATA : lv_string12(20) TYPE c VALUE '0123456789'.
+
+IF lv_string11 CA lv_string12.
+  WRITE: sy-fdpos.
+  ELSE.
+    WRITE: sy-fdpos.
+
+ENDIF.
+
+***Output is 5 becuase matched in the position of 5.***
