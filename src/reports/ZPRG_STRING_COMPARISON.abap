@@ -126,3 +126,31 @@ IF lv_string11 CA lv_string12.
 ENDIF.
 
 ***Output is 8***
+
+***CA is case sensitive***
+
+DATA : lv_string11(20) TYPE c VALUE 'Test@abc'.
+DATA : lv_string12(20) TYPE c VALUE '0123456789'.
+DATA : lv_string13(20) TYPE c VALUE 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.
+
+IF lv_string11 CA lv_string13.
+  WRITE: sy-fdpos.
+  ELSE.
+    WRITE: sy-fdpos.
+
+ENDIF.
+
+***Output is 0 becuase the letter position is var1 is 0 which matched to var3***
+
+DATA : lv_string11(20) TYPE c VALUE 'test@abc'.
+DATA : lv_string12(20) TYPE c VALUE '0123456789'.
+DATA : lv_string13(20) TYPE c VALUE 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.
+
+IF lv_string11 CA lv_string13.
+  WRITE: sy-fdpos.
+  ELSE.
+    WRITE: sy-fdpos.
+
+ENDIF.
+
+**Output will show the length of the v1 becuase it's case sensitive and doesn't match to var3.
