@@ -112,3 +112,17 @@ IF lv_string11 CA lv_string12.
 ENDIF.
 
 ***Output is 5 becuase matched in the position of 5.***
+
+**If any letters in var1 and var2 do not match, the output will be the length of var1.***
+
+DATA : lv_string11(20) TYPE c VALUE 'Test@abc'.
+DATA : lv_string12(20) TYPE c VALUE '0123456789'.
+
+IF lv_string11 CA lv_string12.
+  WRITE: sy-fdpos.
+  ELSE.
+    WRITE: sy-fdpos.
+
+ENDIF.
+
+***Output is 8***
