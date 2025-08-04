@@ -184,3 +184,18 @@ IF lv_string11 NA lv_string12.
 ENDIF.
 
 ***Output is 10, length of v1 becuase no same charachter found in v2.***
+
+REPORT ZPRG_STRING_COMPARISON2.
+
+*Conatins String (CS)
+
+DATA : lv_string1(30) TYPE c VALUE 'System Application Product'.
+DATA : lv_string2(10) TYPE c VALUE 'System'.
+
+IF lv_string1 CS lv_string2.
+
+  WRITE: sy-fdpos.
+  ELSE.
+    WRITE: sy-fdpos.
+
+ENDIF.
