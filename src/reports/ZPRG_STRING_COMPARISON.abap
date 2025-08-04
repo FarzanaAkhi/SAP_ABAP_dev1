@@ -154,3 +154,33 @@ IF lv_string11 CA lv_string13.
 ENDIF.
 
 **Output will show the length of the v1 becuase it's case sensitive and doesn't match to var3.
+
+***NA(Contains not any)***
+
+DATA : lv_string11(10) TYPE c VALUE 'Test@1234'.
+DATA : lv_string12(10) TYPE c VALUE '0123456789'.
+DATA : lv_string13(29) TYPE c VALUE 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.
+
+IF lv_string11 NA lv_string12.
+
+  WRITE: sy-fdpos.
+  ELSE.
+    WRITE: sy-fdpos.
+
+ENDIF.
+
+**Output is 5, first matching charachter***
+
+ATA : lv_string11(10) TYPE c VALUE 'Test@abcd'.
+DATA : lv_string12(10) TYPE c VALUE '0123456789'.
+DATA : lv_string13(29) TYPE c VALUE 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.
+
+IF lv_string11 NA lv_string12.
+
+  WRITE: sy-fdpos.
+  ELSE.
+    WRITE: sy-fdpos.
+
+ENDIF.
+
+***Output is 10, length of v1 becuase no same charachter found in v2.***
