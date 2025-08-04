@@ -201,3 +201,20 @@ IF lv_string1 CS lv_string2.
 ENDIF.
 
 *Output will show the first matching string which is 0**
+
+**if the result is false then will show the length of the v1***, for instance***
+
+*Conatins String (CS)
+
+DATA : lv_string1(30) TYPE c VALUE 'System Application Product'.
+DATA : lv_string2(10) TYPE c VALUE 'Welcome'.
+
+IF lv_string1 CS lv_string2.
+
+  WRITE: sy-fdpos.
+  ELSE.
+    WRITE: sy-fdpos.
+
+ENDIF.
+
+*** Output is showing th length of the v1 which is 30***
