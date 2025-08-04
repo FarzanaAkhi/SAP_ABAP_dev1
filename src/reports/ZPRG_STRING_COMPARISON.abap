@@ -199,3 +199,5 @@ IF lv_string1 CS lv_string2.
     WRITE: sy-fdpos.
 
 ENDIF.
+
+*Output will show the first matching string which is 0**
