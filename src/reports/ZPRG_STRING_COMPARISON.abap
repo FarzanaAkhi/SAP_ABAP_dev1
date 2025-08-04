@@ -218,3 +218,5 @@ IF lv_string1 CS lv_string2.
 ENDIF.
 
 *** Output is showing th length of the v1 which is 30***
+
+**CS is not case sensitive**
