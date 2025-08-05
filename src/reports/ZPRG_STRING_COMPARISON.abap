@@ -247,4 +247,30 @@ ELSE.
   WRITE:sy-fdpos.
 ENDIF.
 
-** It's opposite of CO and Output is 5, length of v1 becuase condition is false.**
+** CS opposite of CO and Output is 5, length of v1 becuase condition is false.** Not case sensitive**
+
+**NS(Contains No String)***
+
+DATA: lv_string1(30) TYPE c VALUE 'System Application Product'.
+
+DATA: lv_string2(10) TYPE c VALUE 'system'.
+
+IF lv_string1 NS lv_string2.
+  WRITE : sy-fdpos.
+ELSE.
+  WRITE:sy-fdpos.
+ENDIF.
+
+**Not case sensitive** output is Flase, 0, so will show the first charachter of v2**
+
+DATA: lv_string1(30) TYPE c VALUE 'System Application Product'.
+
+DATA: lv_string2(10) TYPE c VALUE 'welcome'.
+
+IF lv_string1 NS lv_string2.
+  WRITE : sy-fdpos.
+ELSE.
+  WRITE:sy-fdpos.
+ENDIF.
+
+**Output is TRUE, so will return the length of v1**
