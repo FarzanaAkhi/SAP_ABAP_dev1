@@ -233,4 +233,18 @@ ELSE.
   WRITE:sy-fdpos.
 ENDIF.
 
-**Output is 5, length of v1**
+**Output is 5, length of v1** Because condition is TRUE.
+
+**CS(Contains String)**
+
+DATA: lv_string1(5) TYPE c VALUE 'Madam'.
+
+DATA: lv_string2(5) TYPE c VALUE 'damaM'.
+
+IF lv_string1 CS lv_string2.
+  WRITE : sy-fdpos.
+ELSE.
+  WRITE:sy-fdpos.
+ENDIF.
+
+** It's opposite of CO and Output is 5, length of v1 becuase condition is false.**
