@@ -220,3 +220,17 @@ ENDIF.
 *** Output is showing th length of the v1 which is 30***
 
 **CS is not case sensitive**
+
+*Contains CO***
+
+DATA: lv_string1(5) TYPE c VALUE 'Madam'.
+
+DATA: lv_string2(5) TYPE c VALUE 'damaM'.
+
+IF lv_string1 CO lv_string2.
+  WRITE : sy-fdpos.
+ELSE.
+  WRITE:sy-fdpos.
+ENDIF.
+
+**Output is 5, length of v1**
