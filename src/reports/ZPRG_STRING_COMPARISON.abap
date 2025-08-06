@@ -274,3 +274,31 @@ ELSE.
 ENDIF.
 
 **Output is TRUE, so will return the length of v1**
+
+**CP(Contains Pattern)**
+// Here '*' means all / or any . So if we use * at the begining then system will assume any ocharachter or all string
+
+DATA: lv_string1(30) TYPE c VALUE 'System Application Product'.
+
+DATA: lv_string2(10) TYPE c VALUE '*App*'.
+
+IF lv_string1 CP lv_string2.
+  WRITE : sy-fdpos.
+ELSE.
+  WRITE:sy-fdpos.
+ENDIF.
+
+** Output is 7, Because it's TRUE and first matching character's position will show as output"
+
+
+DATA: lv_string1(30) TYPE c VALUE 'System Application Product'.
+
+DATA: lv_string2(10) TYPE c VALUE 'App*'. // Removed * from the begining, so system will see that string has started with System not App//
+
+IF lv_string1 CP lv_string2.
+  WRITE : sy-fdpos.
+ELSE.
+  WRITE:sy-fdpos.
+ENDIF.
+
+**Output will be False and will show the length of V1**
