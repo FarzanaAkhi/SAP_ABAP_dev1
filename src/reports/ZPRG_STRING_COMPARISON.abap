@@ -328,6 +328,7 @@ ENDIF.
 as the Application starts with capital A, so when we added # with star it dedicatedly specified the character**
 
 **Examples(The wildcard characters * and +)**
+
 DATA: lv_string1(30) TYPE c VALUE 'System Application Product'.
 
 DATA: lv_string2(10) TYPE c VALUE '*#**'. // Here * after # is character *, not symbol//
@@ -340,3 +341,15 @@ ENDIF.
 
 ** So output is False bbecause ethere is no * in the string** 
 *But if we add * in the first string then the output will be TRUE and will show offset of first matching character position of v1*
+
+*Examples(The escape character itself)*
+
+DATA: lv_string1(30) TYPE c VALUE 'System Application Product'.
+
+DATA: lv_string2(10) TYPE c VALUE '*##*'. //here 2nd # is character #, not symbol//
+
+IF lv_string1 CP lv_string2.
+  WRITE : sy-fdpos.
+ELSE.
+  WRITE:sy-fdpos.
+ENDIF.
