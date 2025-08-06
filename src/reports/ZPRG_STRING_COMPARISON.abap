@@ -302,7 +302,27 @@ ELSE.
 ENDIF.
 
 **Output will be False and will show the length of V1**
+**Not case Sensitive**
 
 Notes for CP( Contains Pattern):  * - Match any sequence of charachter
                                   + - Match any single charachter
-                                  # - Interpret the next charachter
+                                  # - Interpret the next charachter, Called escape Character
+
+**Now '#'**
+Usage : Can be used to make a search case sensitive.
+The wildcard characters * and +
+The escape character itself
+
+*Examples*
+DATA: lv_string1(30) TYPE c VALUE 'System Application Product'.
+
+DATA: lv_string2(10) TYPE c VALUE '*#app*'.
+
+IF lv_string1 CP lv_string2.
+  WRITE : sy-fdpos.
+ELSE.
+  WRITE:sy-fdpos.
+ENDIF.
+
+**Output will show False and length of v1, becuase when we used # it specify the case sensitiveness, 
+as the Application starts with capital A, so when we added # with star it dedicatedly specified the character**
