@@ -303,6 +303,6 @@ ENDIF.
 
 **Output will be False and will show the length of V1**
 
-Notes : * - Match any sequence of charachter
-        + - Match any single charachter
-        # - Interpret the next charachter
+Notes for CP( Contains Pattern):  * - Match any sequence of charachter
+                                  + - Match any single charachter
+                                  # - Interpret the next charachter
