@@ -293,7 +293,7 @@ ENDIF.
 
 DATA: lv_string1(30) TYPE c VALUE 'System Application Product'.
 
-DATA: lv_string2(10) TYPE c VALUE 'App*'. // Removed * from the begining, so system will see that string has started with System not App//
+DATA: lv_string2(10) TYPE c VALUE 'App*'. // Removed * from the begining, so system will see that string has started with System not App and as * is after App so it will think after app any number of character//
 
 IF lv_string1 CP lv_string2.
   WRITE : sy-fdpos.
@@ -302,3 +302,7 @@ ELSE.
 ENDIF.
 
 **Output will be False and will show the length of V1**
+
+Notes : * - Match any sequence of charachter
+        + - Match any single charachter
+        # - Interpret the next charachter
