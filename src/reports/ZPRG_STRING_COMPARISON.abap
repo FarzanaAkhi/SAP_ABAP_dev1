@@ -371,7 +371,7 @@ ENDIF.
 
 ***Output is TRUE and will return the position of the first matching Character so, 0.**
 
-**CP +**
+**Removing character after +**
 
 DATA: lv_string1(5) TYPE c VALUE 'ABCDE'.
 
@@ -384,3 +384,17 @@ ELSE.
 ENDIF.
 
 **Output is False becuase + works only one character. So output will return the length of v1 which is 5**
+
+** Addicing '*' after +**
+
+DATA: lv_string1(5) TYPE c VALUE 'ABCDE'.
+
+DATA: lv_string2(5) TYPE c VALUE 'AB+*'.
+
+IF lv_string1 CP lv_string2.
+  WRITE : sy-fdpos.
+ELSE.
+  WRITE:sy-fdpos.
+ENDIF.
+
+**Output is TRUE and will return 0 becuase '*' represents all**
