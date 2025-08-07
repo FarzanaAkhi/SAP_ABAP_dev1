@@ -353,3 +353,20 @@ IF lv_string1 CP lv_string2.
 ELSE.
   WRITE:sy-fdpos.
 ENDIF.
+
+***Now '+'***
+Notes : Match Any single character
+
+**CP +**
+
+DATA: lv_string1(5) TYPE c VALUE 'ABCDE'.
+
+DATA: lv_string2(5) TYPE c VALUE 'AB+DE'.
+
+IF lv_string1 CP lv_string2.
+  WRITE : sy-fdpos.
+ELSE.
+  WRITE:sy-fdpos.
+ENDIF.
+
+***Output is TRUE and will return the position of the first matching Character so, 0.**
