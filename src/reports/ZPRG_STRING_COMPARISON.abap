@@ -397,4 +397,16 @@ ELSE.
   WRITE:sy-fdpos.
 ENDIF.
 
-**Output is TRUE and will return 0 becuase '*' represents all**
+**Output is TRUE and will return 0 becuase '*' represents all**// we can add + for all single characters//
+
+*** NP(Contains no pattern)*** Opposite of CP**
+
+DATA: lv_string1(30) TYPE c VALUE 'System Application Product'.
+
+DATA: lv_string2(10) TYPE c VALUE '*App*'.
+
+IF lv_string1 NP lv_string2.
+  WRITE : sy-fdpos.
+ELSE.
+  WRITE:sy-fdpos.
+ENDIF.
