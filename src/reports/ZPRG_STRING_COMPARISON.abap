@@ -424,4 +424,18 @@ ELSE.
   WRITE:sy-fdpos.
 ENDIF.
 
-**Here output is TRUE because first string is not containing the 2nd string. So it will return the length of first string**, output is 30.
+**Here output is TRUE because first string is not containing the 2nd string. 
+*So it will return the length of first string**, output is 30.
+
+DATA: lv_string1(30) TYPE c VALUE 'System Application Product'.
+
+DATA: lv_string2(10) TYPE c VALUE '*Welcome*'.
+
+IF lv_string1 NP lv_string2.
+  WRITE : sy-fdpos.
+ELSE.
+  WRITE:sy-fdpos.
+ENDIF.
+
+**Here also output is TRUE because first string is not containing the 2nd string. 
+*So it will return the length of first string**, output is 30.
