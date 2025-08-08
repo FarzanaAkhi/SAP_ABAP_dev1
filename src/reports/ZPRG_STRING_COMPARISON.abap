@@ -450,7 +450,8 @@ ELSE.
   WRITE:sy-fdpos.
 ENDIF.
 
-** Output will be TRUE and will go else part and will return the position of first matching character, result is 7**
+** Output is FALSE and will go for else part cause the v2 string is containg pattern of v1, 
+**so will return first position character of v2 that is in v1, result is 7**
 
 DATA: lv_string1(30) TYPE c VALUE 'System Application Product'.
 
@@ -462,5 +463,5 @@ ELSE.
   WRITE:sy-fdpos.
 ENDIF.
 
-** Output is FALSE and will go for else part cause the v2 string is containg pattern of v1, 
-**so will return first position character of v2 that is in v1, result is 7**
+**Here also output is TRUE because first string is not containing the 2nd string. 
+*So it will return the length of first string**, output is 30.
