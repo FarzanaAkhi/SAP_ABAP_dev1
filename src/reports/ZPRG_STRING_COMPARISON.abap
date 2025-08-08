@@ -411,7 +411,7 @@ ELSE.
   WRITE:sy-fdpos.
 ENDIF.
 
-** Output will go for else part cause the v2 string is containg pattern of v1, 
+** Output is FALSE and will go for else part cause the v2 string is containg pattern of v1, 
 **so will return first position character of v2 that is in v1, result is 7**
 
 DATA: lv_string1(30) TYPE c VALUE 'System Application Product'.
@@ -442,10 +442,25 @@ ENDIF.
 
 DATA: lv_string1(30) TYPE c VALUE 'System Application Product'.
 
-DATA: lv_string2(10) TYPE c VALUE '#App*'.
+DATA: lv_string2(10) TYPE c VALUE '#App*'. // Here after '#', it will interpret the next charachter as it is, and '*' interpret any seq of charachter//
 
 IF lv_string1 NP lv_string2.
   WRITE : sy-fdpos.
 ELSE.
   WRITE:sy-fdpos.
 ENDIF.
+
+** Output will be TRUE and will go else part and will return the position of first matching character, result is 7**
+
+DATA: lv_string1(30) TYPE c VALUE 'System Application Product'.
+
+DATA: lv_string2(10) TYPE c VALUE '#app*'. // '#' contains the case sensitivity, here app is with small a//
+
+IF lv_string1 NP lv_string2.
+  WRITE : sy-fdpos.
+ELSE.
+  WRITE:sy-fdpos.
+ENDIF.
+
+** Output is FALSE and will go for else part cause the v2 string is containg pattern of v1, 
+**so will return first position character of v2 that is in v1, result is 7**
