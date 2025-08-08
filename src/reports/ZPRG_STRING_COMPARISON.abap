@@ -410,3 +410,18 @@ IF lv_string1 NP lv_string2.
 ELSE.
   WRITE:sy-fdpos.
 ENDIF.
+
+** Output will go for else part cause the v2 string is containg pattern of v1, 
+**so will return first position character of v2 that is in v1, result is 7**
+
+DATA: lv_string1(30) TYPE c VALUE 'System Application Product'.
+
+DATA: lv_string2(10) TYPE c VALUE 'App*'. // Removed first '*'. 
+
+IF lv_string1 NP lv_string2.
+  WRITE : sy-fdpos.
+ELSE.
+  WRITE:sy-fdpos.
+ENDIF.
+
+**Here output is TRUE because first string is not containing the 2nd string. So it will return the length of first string**, output is 30.
