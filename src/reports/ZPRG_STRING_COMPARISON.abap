@@ -483,3 +483,19 @@ ENDIF.
 
 ** Output is TRUE becuase first string is not containing the 2nd string. **
 **Bucause we are looking for contains no pattern, so output will return the length of first string which is 30**
+
+
+** Now false result Example***
+
+DATA: lv_string1(30) TYPE c VALUE 'System* Application Product'.
+
+DATA: lv_string2(10) TYPE c VALUE '*#**'. " here * first star is sequence of character, 2nd * will act as a single character, character * itself because before that # is present, so * is present in v1 string.
+
+IF lv_string1 NP lv_string2.
+  WRITE : sy-fdpos.
+ELSE.
+  WRITE:sy-fdpos.
+ENDIF.
+
+** Output is False becuase first string is containing the 2nd string and we are looking for not pattern,**
+** So output will go to else part and will return the first matching character position which is 6***
