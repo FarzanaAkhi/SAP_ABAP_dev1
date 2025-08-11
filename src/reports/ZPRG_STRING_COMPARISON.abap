@@ -470,3 +470,16 @@ ENDIF.
 ***** NP(Contains no pattern)*** Opposite of CP '+' and '#'**
 * '*' means sequence of charachter but '_' means any single character**
 **Now look for specific +, specific * and specific # itself.**
+
+DATA: lv_string1(30) TYPE c VALUE 'System Application Product'.
+
+DATA: lv_string2(10) TYPE c VALUE '*#**'. //" here * first star is sequence of character, 2nd * will act as a single character, character * itself because before that # is present. //
+
+IF lv_string1 NP lv_string2.
+  WRITE : sy-fdpos.
+ELSE.
+  WRITE:sy-fdpos.
+ENDIF.
+
+** Output is TRUE becuase first string is not containing the 2nd string. **
+**Bucause we are looking for contains no pattern, so output will return the length of first string which is 30**
