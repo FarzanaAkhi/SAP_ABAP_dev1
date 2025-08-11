@@ -465,3 +465,8 @@ ENDIF.
 
 **Here also output is TRUE because first string is not containing the 2nd string. 
 *So it will return the length of first string**, output is 30.
+
+
+***** NP(Contains no pattern)*** Opposite of CP '+' and '#'**
+* '*' means sequence of charachter but '_' means any single character**
+**Now look for specific +, specific * and specific # itself.**
