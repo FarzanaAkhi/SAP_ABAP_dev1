@@ -18,9 +18,9 @@ DATA: lt_data TYPE TABLE OF lty_data. "lt_data (internal table, which stores dat
 
 DATA: lwa_data TYPE lty_data.
 
-** We can create table through se11 transaction or through code.**
+** We can create structured data type through se11 transaction or through code.**
 
-** through code**
+** structured data type creating through code**
 
 REPORT ZPRG_INTERNALTABLE_CHECK.
 
