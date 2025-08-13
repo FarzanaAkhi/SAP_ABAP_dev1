@@ -36,3 +36,8 @@ DATA: lt_data TYPE TABLE OF lty_data. "lt_data- data object
 DATA: lwa_data TYPE lty_data.
 DATA: lt_data TYPE TABLE OF ZSTYPE_ORDER. // Same structure name as I created through se11 transaction//
 DATA: lwa_data TYPE ZSTYPE_ORDER.
+
+**Differnece between creating structured data type through coding and through se11 transaction***
+
+Coding : I can  not reuse the code created structured data type in anyother program. Becuase it's local to this program.
+Se11 transaction : If I create another program and want to reuse the internal table which made through se11 transaction, I can do that**
