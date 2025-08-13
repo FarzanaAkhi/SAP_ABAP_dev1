@@ -42,3 +42,6 @@ DATA: lwa_data TYPE ZSTYPE_ORDER.
 Coding : I can  not reuse the code created structured data type in anyother program. Becuase it's local to this program.
 Se11 transaction : If I create another program and want to reuse the internal table/ structured data type which made through se11 transaction, I can do that**
 **Because se11 transaction has a global scope** Global Scope : Can use end number of programs**
+
+** Internal Table : Keyword is Type Table of**
+*Work area always stores single records at runtime**
