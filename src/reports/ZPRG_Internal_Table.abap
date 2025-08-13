@@ -17,3 +17,22 @@ DATA: lt_data TYPE TABLE OF lty_data. "lt_data (internal table, which stores dat
 **Declear work area
 
 DATA: lwa_data TYPE lty_data.
+
+** We can create table through se11 transaction or through code.**
+
+** through code**
+
+REPORT ZPRG_INTERNALTABLE_CHECK.
+
+TYPES : BEGIN OF lty_data,
+        ono TYPE ZDEONO_28, " ono - Data object, ZDEONO_28 - Data type
+        PM TYPE  ZDEPM_28,
+        END OF lty_data.
+
+*DATA: lv_ono(10) TYPE N.
+*DATA: lv_ono(10) TYPE ZDEONO_28.
+
+DATA: lt_data TYPE TABLE OF lty_data. "lt_data- data object
+DATA: lwa_data TYPE lty_data.
+DATA: lt_data TYPE TABLE OF ZSTYPE_ORDER. // Same structure name as I created through se11 transaction//
+DATA: lwa_data TYPE ZSTYPE_ORDER.
