@@ -45,3 +45,21 @@ Se11 transaction : If I create another program and want to reuse the internal ta
 
 ** Internal Table : Keyword is Type Table of**
 *Work area always stores single records at runtime**
+
+
+***Table type to declear the internal table**
+
+TYPES : BEGIN OF lty_data,
+        ono TYPE ZDEONO_28, " ono - Data object, ZDEONO_28 - Data type
+        PM TYPE  ZDEPM_28,
+        END OF lty_data.
+       
+TYPES: ltty_data TYPE TABLE OF lty_data.
+       
+DATA: lt_data TYPE TABLE OF lty_data. "lt_data- data object
+DATA: lwa_data TYPE lty_data.
+DATA: lt_data TYPE TABLE OF ZSTYPE_ORDER.
+DATA: lwa_data TYPE ZSTYPE_ORDER.
+DATA: lt_data TYPE ltty_data.
+DATA: lwa_data TYPE lty_data. " Work area never uses table type, only structre type"
+DATA: lt_data TYPE ZTSTYPE_ORDER. // Same table I have created through se11 already//
