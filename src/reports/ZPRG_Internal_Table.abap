@@ -2,7 +2,7 @@
 ** need an internal table of 10 columns, so we need to create a structure of 10 columns.
 
 REPORT ZPRG_INTERNALTABLE_CHECK.
-**Create a structure**
+****Create a structure type to declear the internal table****
 
 TYPES : BEGIN OF lty_data,
         ono TYPE ZDEONO_28, " ono - Data object, ZDEONO_28 - Data type
