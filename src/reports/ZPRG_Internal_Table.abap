@@ -63,3 +63,21 @@ DATA: lwa_data TYPE ZSTYPE_ORDER.
 DATA: lt_data TYPE ltty_data.
 DATA: lwa_data TYPE lty_data. " Work area never uses table type, only structre type"
 DATA: lt_data TYPE ZTSTYPE_ORDER. // Same table I have created through se11 already//
+
+***Important Notes***
+
+Internal Table Operations
+
+Append – It is used to insert data at the last of the internal table.
+
+Delete – It is used to delete the records from the internal table.
+
+Modify – It is used to modify the records of the internal table.
+
+Loop – It is used to read the records one by one from the internal table.
+
+Read table – It is used to read the first matching record from the internal table.
+
+Clear, Refresh – It is used to clear the contents of the internal table.
+
+Collect – It is used to make sum of amount values based upon unique character values.
