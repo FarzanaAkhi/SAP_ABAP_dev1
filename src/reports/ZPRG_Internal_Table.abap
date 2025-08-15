@@ -117,3 +117,7 @@ lwa_data-ono = 3.
 lwa_data-pm = 'C'.
 APPEND lwa_data to lt_data.
 CLEAR : lwa_data.
+
+
+**In debugging mode each time I executed it always started where I finished last time, so started after the last inserted data**
+***Work area takes 1 record at a time**
