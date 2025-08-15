@@ -92,3 +92,8 @@ TYPES : BEGIN OF lty_data,
         
 DATA: lt_data TYPE TABLE OF lty_data.
 DATA: lwa_data TYPE lty_data.
+
+lwa_data-ono = 1.
+lwa_data-pm = 'C'.
+APPEND lwa_data to lt_data.
+CLEAR : lwa_data.
