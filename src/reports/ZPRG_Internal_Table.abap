@@ -97,3 +97,23 @@ lwa_data-ono = 1.
 lwa_data-pm = 'C'.
 APPEND lwa_data to lt_data.
 CLEAR : lwa_data.
+
+lwa_data-ono = 1.
+lwa_data-pm = 'D'.
+APPEND lwa_data to lt_data.
+CLEAR : lwa_data.
+
+lwa_data-ono = 2.
+lwa_data-pm = 'C'.
+APPEND lwa_data to lt_data.
+CLEAR : lwa_data.
+
+lwa_data-ono = 2.
+lwa_data-pm = 'D'.
+APPEND lwa_data to lt_data.
+CLEAR : lwa_data.
+
+lwa_data-ono = 3.
+lwa_data-pm = 'C'.
+APPEND lwa_data to lt_data.
+CLEAR : lwa_data.
