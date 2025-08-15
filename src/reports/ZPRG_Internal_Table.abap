@@ -81,3 +81,14 @@ Read table – It is used to read the first matching record from the internal ta
 Clear, Refresh – It is used to clear the contents of the internal table.
 
 Collect – It is used to make sum of amount values based upon unique character values.
+
+
+** Internal table operation: Append**
+
+TYPES : BEGIN OF lty_data,
+        ono TYPE ZDEONO_28, " ono - Data object, ZDEONO_28 - Data type
+        PM TYPE  ZDEPM_28,
+        END OF lty_data.
+        
+DATA: lt_data TYPE TABLE OF lty_data.
+DATA: lwa_data TYPE lty_data.
