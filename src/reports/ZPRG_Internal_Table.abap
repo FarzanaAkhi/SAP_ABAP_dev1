@@ -129,3 +129,19 @@ CLEAR : lwa_data.
 LOOP AT lt_data INTO lwa_data.
   WRITE: / lwa_data-ono, lwa_data-pm.
 ENDLOOP.
+
+**Output is : lt_data:[5x2(22)]Standard Table
+** lwa_data: 0000000001C
+LWA_DATA-ONO : 0000000001
+LWA_DATA-PM: C
+
+*** Then again in the next iteration: LWA_DATA: 0000000002D
+LWA_DATA-ONO: 0000000002
+LWA_DATA-PM: D
+
+ONO                   pm
+0000000001             C 
+0000000001             D
+0000000002             C
+0000000002             D
+0000000003             C
