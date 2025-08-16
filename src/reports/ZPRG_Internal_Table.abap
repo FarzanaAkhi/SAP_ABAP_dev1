@@ -121,3 +121,7 @@ CLEAR : lwa_data.
 
 **In debugging mode each time I executed it always started where I finished last time, so started after the last inserted data**
 ***Work area takes 1 record at a time**
+
+**Loop at internal Table**
+**Loop is an internal table operation, which will read the records of the internal table one by one***
+**As many as I have records loop will read that many times**
