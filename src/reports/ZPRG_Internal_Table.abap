@@ -125,3 +125,7 @@ CLEAR : lwa_data.
 **Loop at internal Table**
 **Loop is an internal table operation, which will read the records of the internal table one by one***
 **As many as I have records loop will read that many times**
+
+LOOP AT lt_data INTO lwa_data.
+  WRITE: / lwa_data-ono, lwa_data-pm.
+ENDLOOP.
