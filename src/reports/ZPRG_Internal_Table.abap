@@ -181,4 +181,8 @@ lwa_data-pm = 'C'.
 APPEND lwa_data TO lt_data.
 CLEAR : lwa_data.
 
-Delete lt_data WHERE pm = 'D'
+Delete lt_data WHERE pm = 'D'.
+
+**Output: 0000000001      C 
+          0000000002      C
+          0000000003      C **
