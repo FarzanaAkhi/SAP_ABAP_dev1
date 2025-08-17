@@ -147,3 +147,38 @@ ONO                   pm
 0000000003             C
 
 *Delete with Where condition**
+
+TYPES : BEGIN OF lty_data,
+        ono TYPE zdeono_28, " ono - Data object, ZDEONO_28 - Data type
+        pm TYPE  zdepm_28,
+        END OF lty_data.
+
+DATA: lt_data TYPE TABLE OF lty_data.
+DATA: lwa_data TYPE lty_data.
+
+lwa_data-ono = 1.
+lwa_data-pm = 'C'.
+APPEND lwa_data TO lt_data.
+CLEAR : lwa_data.
+
+lwa_data-ono = 1.
+lwa_data-pm = 'D'.
+APPEND lwa_data TO lt_data.
+CLEAR : lwa_data.
+
+lwa_data-ono = 2.
+lwa_data-pm = 'C'.
+APPEND lwa_data TO lt_data.
+CLEAR : lwa_data.
+
+lwa_data-ono = 2.
+lwa_data-pm = 'D'.
+APPEND lwa_data TO lt_data.
+CLEAR : lwa_data.
+
+lwa_data-ono = 3.
+lwa_data-pm = 'C'.
+APPEND lwa_data TO lt_data.
+CLEAR : lwa_data.
+
+Delete lt_data WHERE pm = 'D'
