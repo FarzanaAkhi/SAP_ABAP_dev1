@@ -186,3 +186,5 @@ Delete lt_data WHERE pm = 'D'.
 **Output: 0000000001      C 
           0000000002      C
           0000000003      C **
+
+** If I put Delete lt_data WHERE pm = 'd', it will not work""
