@@ -185,6 +185,16 @@ Delete lt_data WHERE pm = 'D'.
 
 **Output: 0000000001      C 
           0000000002      C
-          0000000003      C **
+          0000000003      C ** it Deleted all lt_data ='D' details
 
 ** If I put Delete lt_data WHERE pm = 'd', it will not work""
+
+**Delete Specific Index***
+*Delete Internal table index**
+
+DELETE lt_data INDEX 3.
+
+**Output: 0000000001      C
+          0000000001      D
+          0000000002      D
+          0000000003      C** It deleted Index 3**
