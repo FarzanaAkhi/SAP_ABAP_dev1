@@ -145,3 +145,5 @@ ONO                   pm
 0000000002             C
 0000000002             D
 0000000003             C
+
+*Delete with Where condition**
