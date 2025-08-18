@@ -209,3 +209,13 @@ LOOP at lt_data INTO lwa_data.
     ENDIF.
 
   ENDLOOP.
+
+  * output is:
+ONO                   pm
+0000000001             N
+0000000001             N
+0000000002             C
+0000000002             D
+0000000003             C
+
+*Because i asked only to change workarea 1.**
