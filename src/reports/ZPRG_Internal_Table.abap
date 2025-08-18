@@ -218,4 +218,4 @@ ONO                   pm
 0000000002             D
 0000000003             C
 
-*Because i asked only to change workarea 1.**
+*Because i asked only to change if workarea is 1 then change PM to N..**
