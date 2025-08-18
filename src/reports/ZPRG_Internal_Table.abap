@@ -198,3 +198,14 @@ DELETE lt_data INDEX 3.
           0000000001      D
           0000000002      D
           0000000003      C** It deleted Index 3**
+
+**Modify The Internal Table**
+
+LOOP at lt_data INTO lwa_data.
+
+  if lwa_data-ono = 1.
+    lwa_data-pm = 'N'.
+    MODIFY lt_data  FROM lwa_data TRANSPORTING pm.
+    ENDIF.
+
+  ENDLOOP.
