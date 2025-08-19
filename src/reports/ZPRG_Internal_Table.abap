@@ -218,4 +218,48 @@ ONO                   pm
 0000000002             D
 0000000003             C
 
-*Because i asked only to change if workarea is 1 then change PM to N..**
+*Because i asked only to change if workarea is 1 then change PM to N..** TRANSPORTING specify the column.
+
+**READ Table**
+
+TYPES : BEGIN OF lty_data,
+        ono TYPE zdeono_28, " ono - Data object, ZDEONO_28 - Data type
+        pm TYPE  zdepm_28,
+        END OF lty_data.
+
+DATA: lt_data TYPE TABLE OF lty_data.
+DATA: lwa_data TYPE lty_data.
+
+lwa_data-ono = 1.
+lwa_data-pm = 'C'.
+APPEND lwa_data TO lt_data.
+CLEAR : lwa_data.
+
+lwa_data-ono = 1.
+lwa_data-pm = 'D'.
+APPEND lwa_data TO lt_data.
+CLEAR : lwa_data.
+
+lwa_data-ono = 2.
+lwa_data-pm = 'C'.
+APPEND lwa_data TO lt_data.
+CLEAR : lwa_data.
+
+lwa_data-ono = 2.
+lwa_data-pm = 'D'.
+APPEND lwa_data TO lt_data.
+CLEAR : lwa_data.
+
+lwa_data-ono = 3.
+lwa_data-pm = 'C'.
+APPEND lwa_data TO lt_data.
+CLEAR : lwa_data.
+
+READ TABLE lt_data INTO lwa_data with KEY ONO = 1.
+
+IF  SY-SUBRC = 0.
+  WRITE : / lwa_data-ono, lwa_data-pm.
+  else.
+    WRITE : / 'Unsuccessful'.
+
+ENDIF.
