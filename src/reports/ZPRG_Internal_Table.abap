@@ -263,3 +263,5 @@ IF  SY-SUBRC = 0.
     WRITE : / 'Unsuccessful'.
 
 ENDIF.
+
+**Output is 0000000001      C, becuase READ Table always matches the first record**
