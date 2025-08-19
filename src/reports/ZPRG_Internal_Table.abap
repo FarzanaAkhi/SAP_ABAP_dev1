@@ -276,3 +276,11 @@ IF  SY-SUBRC = 0.
 ENDIF.
 
 **Output is Unsuccessful, becuase there is no order number 4**
+
+READ TABLE lt_data INTO lwa_data Index 4.
+IF  SY-SUBRC = 0.
+  WRITE : / lwa_data-ono, lwa_data-pm.
+
+ENDIF.
+
+** Output is 0000000002             D**
