@@ -283,4 +283,4 @@ IF  SY-SUBRC = 0.
 
 ENDIF.
 
-** Output is 0000000002             D**
+** Output is 0000000002 D**
