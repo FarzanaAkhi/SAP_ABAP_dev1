@@ -265,3 +265,14 @@ IF  SY-SUBRC = 0.
 ENDIF.
 
 **Output is 0000000001      C, becuase READ Table always matches the first record**
+
+READ TABLE lt_data INTO lwa_data with KEY ONO = 4. // Changed the order no to 4**
+
+IF  SY-SUBRC = 0.
+  WRITE : / lwa_data-ono, lwa_data-pm.
+  else.
+    WRITE : / 'Unsuccessful'.
+
+ENDIF.
+
+**Output is Unsuccessful, becuase there is no order number 4**
