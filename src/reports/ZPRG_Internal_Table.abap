@@ -229,6 +229,7 @@ TYPES : BEGIN OF lty_data,
 
 DATA: lt_data TYPE TABLE OF lty_data.
 DATA: lwa_data TYPE lty_data.
+DATA: lv_lines TYPE I.
 
 lwa_data-ono = 1.
 lwa_data-pm = 'C'.
@@ -327,6 +328,16 @@ REFRESH : lt_data
 
 *** Internal Table has now 0 records**
 
+** Describe Table**
+DESCRIBE TABLE lt_data LINES lv_lines.  // Decleare DATA: lv_lines TYPE I at the begining.//
+DESCRIBE TABLE lt_data LINES lv_lines.
+WRITE : / lv_lines.
+CLEAR lt_data.
+
+DESCRIBE TABLE lt_data LINES lv_lines.
+WRITE : / lv_lines.
+
+**Output will show first 5 and then 0**
 
 LOOP AT lt_data INTO lwa_data.
   WRITE: / lwa_data-ono, lwa_data-pm.
