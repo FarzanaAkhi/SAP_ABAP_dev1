@@ -338,7 +338,3 @@ DESCRIBE TABLE lt_data LINES lv_lines.
 WRITE : / lv_lines.
 
 **Output will show first 5 and then 0**
-
-LOOP AT lt_data INTO lwa_data.
-  WRITE: / lwa_data-ono, lwa_data-pm.
-ENDLOOP.
