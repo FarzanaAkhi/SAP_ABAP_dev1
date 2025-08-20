@@ -325,6 +325,8 @@ CLEAR : lwa_data. // REFRESH doesn't work for work area, only Clear//
 CLEAR lt_data.
 REFRESH : lt_data
 
+*** Internal Table has now 0 records**
+
 
 LOOP AT lt_data INTO lwa_data.
   WRITE: / lwa_data-ono, lwa_data-pm.
