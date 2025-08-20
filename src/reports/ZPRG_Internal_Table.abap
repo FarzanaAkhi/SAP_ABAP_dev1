@@ -329,7 +329,7 @@ REFRESH : lt_data
 *** Internal Table has now 0 records**
 
 ** Describe Table**
-DESCRIBE TABLE lt_data LINES lv_lines.  // Decleare DATA: lv_lines TYPE I at the begining.//
+DESCRIBE TABLE lt_data LINES lv_lines.  // Decleare DATA: lv_lines TYPE I at the begining.lv_lines varriable, will return the number of records of the internal table. //
 DESCRIBE TABLE lt_data LINES lv_lines.
 WRITE : / lv_lines.
 CLEAR lt_data.
