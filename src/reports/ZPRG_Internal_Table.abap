@@ -284,3 +284,9 @@ IF  SY-SUBRC = 0.
 ENDIF.
 
 ** Output is 0000000002 D**
+
+**Clear/ Refresh Internal Table**
+
+LOOP AT lt_data INTO lwa_data.
+  WRITE: / lwa_data-ono, lwa_data-pm.
+ENDLOOP.
