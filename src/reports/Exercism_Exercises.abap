@@ -42,6 +42,8 @@ C	       500	    Group C-2
 
 "Solution :
 
+"Step 1 — fill_itab
+
 METHOD fill_itab.
   " Start clean
   CLEAR initial_data.
@@ -54,3 +56,13 @@ METHOD fill_itab.
   APPEND VALUE #( group = 'A' number = 13  description = 'Group A-3' ) TO initial_data.
   APPEND VALUE #( group = 'C' number = 500 description = 'Group C-2' ) TO initial_data.
 ENDMETHOD.
+
+ "APPEND VALUE #( … ) creates a temporary initial_type row and pushes it to the end of the standard table.
+
+ "Step 2 — add_to_itab
+
+ METHOD add_to_itab.
+  " Add one more row at the very end
+  APPEND VALUE #( group = 'A' number = 19 description = 'Group A-4' ) TO initial_data.
+ENDMETHOD.
+
