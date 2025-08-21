@@ -40,3 +40,17 @@ C	       22	      Group C-1
 A	       13	      Group A-3
 C	       500	    Group C-2
 
+"Solution :
+
+METHOD fill_itab.
+  " Start clean
+  CLEAR initial_data.
+
+  " Put the 6 rows in exactly as requested
+  APPEND VALUE #( group = 'A' number = 10  description = 'Group A-2' ) TO initial_data.
+  APPEND VALUE #( group = 'B' number = 5   description = 'Group B'   ) TO initial_data.
+  APPEND VALUE #( group = 'A' number = 6   description = 'Group A-1' ) TO initial_data.
+  APPEND VALUE #( group = 'C' number = 22  description = 'Group C-1' ) TO initial_data.
+  APPEND VALUE #( group = 'A' number = 13  description = 'Group A-3' ) TO initial_data.
+  APPEND VALUE #( group = 'C' number = 500 description = 'Group C-2' ) TO initial_data.
+ENDMETHOD.
